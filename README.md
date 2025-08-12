@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Plano de Recuperação
 
-## Getting Started
+## Objetivo do Teste
 
-First, run the development server:
+O objetivo é recuperar um projeto perdido ou variantes na máquina usando GIT HUB.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Ambiente do Teste
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Utilizando o Windows, iremos abrir o GITHUB no navegador e acessar o projeto pelo link.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Etapas de Backup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Para que a recuperação funcione, o projeto deve ser salvo (sincronizado) no GitHub regularmente com os seguintes comandos:
 
-## Learn More
+- git add .: Adiciona as alterações.
 
-To learn more about Next.js, take a look at the following resources:
+- git commit -m "mensagem": Salva as alterações localmente.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- git push: Envia as alterações salvas para o GitHub.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Simulação de Falha
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Para simularmos uma falha, é possível apagar a pasta do projeto da máquina, para não ter vestígios. Em situações reais pode ser com o disco corrompido, troca de máquina e entre outras.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Procedimento de Recuperação
+
+- Escolha o local que você irá importar o projeto, nesse lugar abra o TERMINAL;
+- Digite "git clone {link do projeto}" e aperte ENTER
+- Se tudo ocorrer bem, o projeto estará em sua máquina, mas será necessário acesso a internet para que dê certo.
+
+## Critérios de Aceitação
+
+- A pasta do projeto com todos os arquivos da última versão enviada ao GitHub for criada.
+
+- O histórico de alterações (git log) estiver completo e intacto.
+
+- For possível abrir e verificar a integridade dos arquivos do projeto.
